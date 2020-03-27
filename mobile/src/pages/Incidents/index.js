@@ -38,7 +38,9 @@ export default function Incidents(){
     });
 
     setIncident([...incidents, ...response.data]);
-    setTotal(response.headers['X-total-count']);
+    console.log(response.headers);
+    setTotal(response.headers['x-total-count']);
+
     setPage(page + 1);
     setLoading(false);
   }
